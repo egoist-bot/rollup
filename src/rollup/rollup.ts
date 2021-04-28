@@ -65,6 +65,7 @@ export async function rollupInternal(
 	timeEnd('BUILD', 1);
 
 	const result: RollupBuild = {
+		graph,
 		cache: useCache ? graph.getCache() : undefined,
 		closed: false,
 		async close() {

@@ -1,12 +1,15 @@
 {
-  "name": "rollup",
+  "name": "@egoist/rollup",
   "version": "2.45.2",
   "description": "Next-generation ES module bundler",
   "main": "dist/rollup.js",
   "module": "dist/es/rollup.js",
   "typings": "dist/rollup.d.ts",
   "bin": {
-    "rollup": "dist/bin/rollup"
+    "egoist-rollup": "dist/bin/rollup"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "shx rm -rf dist && git rev-parse HEAD > .commithash && rollup -c && shx cp src/rollup/types.d.ts dist/rollup.d.ts && shx chmod a+x dist/bin/rollup",

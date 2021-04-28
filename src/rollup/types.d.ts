@@ -776,6 +776,7 @@ export interface RollupOutput {
 }
 
 export interface RollupBuild {
+	graph: import('../Graph').default
 	cache: RollupCache | undefined;
 	close: () => Promise<void>;
 	closed: boolean;
